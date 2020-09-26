@@ -1,0 +1,25 @@
+<!--pages/home/home.wxml-->
+<view class="container">
+  <image src="/images/inv.png" class="inv"></image>
+  <image src="{{bgImg}}" class="cover" mode="aspectFill"></image>
+  <view class='datetime' animation="{{animationData}}">
+    <view class='box'>
+      <view bindtap="btnName" class="name">
+        <span class="fl">{{inviteName}}</span>
+
+      </view>
+      <view class="date">
+        <view bindtap="btnDateOne">{{inviteDateOne}}
+
+        </view>
+        <view bindtap="btnDateTwo">{{inviteDateTwo}}
+
+        </view>
+        <view bindtap="btnAddress">{{inviteAddress}}
+
+        </view>
+      </view>
+    </view>
+  </view>
+
+</view>
