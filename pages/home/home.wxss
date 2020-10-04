@@ -1,5 +1,69 @@
 /* pages/home/home.wxss */
 
+.backgroundMusic {
+  position: fixed;
+  top: 10rpx;
+  right: 10rpx;
+  width: 80rpx;
+  z-index: 200;
+}
+
+.musicImg {
+  width: 60rpx;
+  height: 60rpx;
+}
+
+.musicIcon {
+  animation: musicRotate 3s linear infinite;
+}
+
+.musicPlay {
+  width: 28rpx;
+  height: 60rpx;
+  margin-left: -5px;
+  transform-origin: top;
+  transform: rotate(20deg);
+  -webkit-transform: rotate(20deg);
+}
+
+.playImg {
+  animation: musicStop 1s linear forwards;
+}
+
+.pauseImg {
+  animation: musicStart 1s linear forwards;
+}
+
+@keyframes musicRotate {
+  from {transform: rotate(0deg);}
+  to {transform: rotate(360deg);}
+}
+
+@-webkit-keyframes musicRotate {
+  from {-webkit-transform: rotate(0deg);}
+  to {-webkit-transform: rotate(360deg);}
+}
+
+@keyframes musicStop {
+  from {transform: rotate(20deg);}
+  to {transform: rotate(0deg);}
+}
+
+@-webkit-keyframes musicStop {
+  from {-webkit-transform: rotate(20deg);}
+  to {-webkit-transform: rotate(0deg);}
+}
+
+@keyframes musicStart {
+  from {transform: rotate(0deg);}
+  to {transform: rotate(20deg);}
+}
+
+@-webkit-keyframes musicStart {
+  from {-webkit-transform: rotate(0deg);}
+  to {-webkit-transform: rotate(20deg);}
+}
+
 .container {
   min-height: 100vh;
 }

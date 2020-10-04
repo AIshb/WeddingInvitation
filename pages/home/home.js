@@ -1,16 +1,25 @@
 // pages/home/home.js
 
+const innerAudioContext = wx.createInnerAudioContext()
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    bgImg: "/images/bg.jpg",
-    editImg: "",
+    autoPlay: false,
+    interval: 2600,
+    duration: 1200,
+    // musicUrl: "http://music.163.com/song/media/outer/url?id=386181.mp3",
+    // innerAudioContext: wx.createInnerAudioContext(),
+    isPlayingMusic: true,
+    // bgImg: "/images/bg.jpg",
+    bgImg: "http://qhm5qrxhf.hd-bkt.clouddn.com/bg.jpeg",
+    // bgImg: "https://wedding-pic.su.bcebos.com/bg.jpeg",
     inviteName: "石鸿斌&刘梦眙",
-    inviteDateOne: "谨定于 2020年10月24日",
-    inviteDateTwo: "农历 2020年九月初八 举办婚礼",
+    inviteDateOne: "将于 2020年10月24日 举办婚礼",
+    inviteDateTwo: "时间：18:08",
     inviteAddress: "地址：昆山皇冠国际会展酒店"
   },
 
@@ -18,7 +27,9 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    innerAudioContext.autoplay = this.data.autoPlay
+    innerAudioContext.src = this.data.musicUrl
+    innerAudioContext.play()
   },
 
   /**
@@ -68,5 +79,34 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+
+  play: function(event) {
+    if (this.data.isPlayingMusic) {
+      innerAudioContext.pause()
+      this.setData({
+        isPlayingMusic: false
+      })
+    } else {
+      innerAudioContext.play()
+      this.setData({
+        isPlayingMusic: true
+      })
+    }
+  },
+
+  btnAddress: function(event) {
+    wx.getLocation({
+      type: 'gcj02',
+      success (res) {
+        const latitude = 31.379537
+        const longitude = 120.926080
+        wx.openLocation({
+          latitude,
+          longitude,
+          scale: 18
+        })
+      }
+    })
   }
 })

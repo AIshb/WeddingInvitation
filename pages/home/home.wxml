@@ -1,4 +1,19 @@
 <!--pages/home/home.wxml-->
+<view wx:if="{{musicUrl}}">
+  <view wx:if="{{isPlayingMusic}}">
+    <view class="backgroundMusic" bindtap="play">
+      <image src="/images/music_icon.png" class="musicImg musicIcon" />
+      <image src="/images/music_play.png" class="musicPlay pauseImg" />
+    </view>
+  </view>
+  <view wx:else>
+    <view class="backgroundMusic" bindtap="play">
+      <image src="/images/music_icon.png" class="musicImg" />
+      <image src="/images/music_play.png" class="musicPlay playImg" />
+    </view>
+  </view>
+</view>
+
 <view class="container">
   <image src="/images/inv.png" class="inv"></image>
   <image src="{{bgImg}}" class="cover" mode="aspectFill"></image>

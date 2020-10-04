@@ -1,8 +1,10 @@
 {
   "pages": [
     "pages/home/home",
+    "pages/navigate/navigate",
     "pages/index/index",
-    "pages/logs/logs"
+    "pages/logs/logs",
+    "pages/we/we"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -21,10 +23,16 @@
         "text": "邀请函"
       },
       {
-        "pagePath": "pages/index/index",
+        "pagePath": "pages/navigate/navigate",
         "iconPath": "images/tab/ic_nav_normal.png",
         "selectedIconPath": "images/tab/ic_nav_select.png",
         "text": "导航"
+      },
+      {
+        "pagePath": "pages/navigate/navigate",
+        "iconPath": "images/tab/ic_heart_normal.png",
+        "selectedIconPath": "images/tab/ic_heart_select.png",
+        "text": "我们"
       }
     ]
   },

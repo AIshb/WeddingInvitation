@@ -1,0 +1,8 @@
+<!--pages/we/we.wxml-->
+<view class="container">
+  <scroll-view class="content" scroll-y="true">
+    <swiper indicator-dots="true" autoplay="true" interval="3000" class="scroll">
+
+    </swiper>
+  </scroll-view>
+</view>
