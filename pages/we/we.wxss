@@ -1,1 +1,213 @@
 /* pages/we/we.wxss */
+
+.container {
+  padding-top: 10px;
+}
+
+.content {
+  height: 100%;
+  width: 100%;
+  background-color: #f1f2f7;
+}
+
+.banner {
+  height: 200px;
+  border-radius: 10px
+}
+
+.bannerItem {
+  height: 100%;
+  width: 100%;
+  border-radius: 10px;
+}
+
+
+.list {
+  position: relative;
+}
+
+.list .type {
+  position: absolute;
+  top: -10rpx;
+  right: -10rpx;
+  width: 120rpx;
+  height: 120rpx;
+}
+
+.type text {
+  font-size: 20rpx;
+  color: #fff;
+  z-index: 99;
+  position: absolute;
+  top: 40rpx;
+  left: 16rpx;
+}
+
+.type image {
+  width: 120rpx;
+  height: 120rpx;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.list-title {
+  display: flex;
+}
+
+.list-title .logo {
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 10rpx;
+  overflow: hidden;
+  margin: 20rpx;
+}
+
+.list-title .logo image {
+  width: 100%;
+}
+
+.imgList {
+  margin: 30rpx auto;
+  width: 640rpx;
+  display: flex;
+  /* justify-content: space-between */
+}
+
+.imgList view {
+  width: 200rpx;
+  height: 200rpx;
+  border-radius: 10rpx;
+  overflow: hidden;
+  position: relative;
+  background: #eee;
+}
+
+.imgList view + view {
+  margin-left: 20rpx;
+}
+
+.imgList view image {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.list:nth-child(2) {
+  border-bottom-right-radius: 15rpx;
+  border-bottom-left-radius: 15rpx;
+}
+
+.list:not(:nth-child(2)) {
+  border-radius: 15rpx;
+}
+
+.list + .list {
+  margin-top: 20rpx;
+}
+
+.list.bannerStyle {
+  height: 482rpx;
+  width: 100%;
+  margin-top: 10px;
+  overflow: hidden;
+  position: relative;
+}
+
+.list.bannerStyle .list-title {
+  width: 100%;
+  height: 64rpx;
+  color: #000;
+  background: #fff;
+}
+
+.list.bannerStyle .list-title view {
+  display: flex;
+  align-items: center;
+  font-size: 24rpx;
+  font-weight: 600;
+  margin-left: 30rpx;
+}
+
+.list.bannerStyle .list-title view text.name {
+  margin-right: 14rpx;
+}
+
+.list.bannerStyle .list-title view text.date {
+  background: #000;
+  color: #fff;
+  min-width: 35rpx;
+  height: 40rpx;
+  padding: 0 5rpx;
+  border-radius: 10rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24rpx;
+}
+
+.text-day text.date, .text-moreDay .clock text.date {
+  margin-right: 10rpx;
+  position: relative;
+}
+
+.text-day text.date:not(:nth-of-type(1)),
+.text-moreDay .clock text.date:not(:nth-of-type(1)) {
+  margin-left: 10rpx;
+}
+
+.text-day text.date:not(:last-of-type)::after {
+  content: ":";
+  display: inline-block;
+  position: absolute;
+  right: -11rpx;
+  color: #000;
+}
+
+/* .text-day text.date:nth-child(4):after{
+  content: "";
+} */
+
+.text-moreDay .clock text.date:not(:last-child)::after {
+  content: ":";
+  display: inline-block;
+  position: absolute;
+  right: -11rpx;
+  color: #000;
+}
+
+.list.bannerStyle .list-title view text.day {
+  margin-left: 6rpx;
+}
+
+/* .list.bannerStyle:nth-child(2) .list-title {
+  background: #feeeee;
+} */
+
+.list.bannerStyle .imgList {
+  width: 100%;
+  height: 420rpx;
+  margin: 0;
+  overflow: hidden;
+}
+
+.list.bannerStyle .imgList view {
+  width: 100%;
+  height: 100%;
+  border-radius: 0;
+}
+
+.list.bannerStyle .jump {
+  position: absolute;
+  right: 30rpx;
+  bottom: 40rpx;
+  width: 140rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  text-align: center;
+  color: #fff;
+  border-radius: 10rpx;
+  background: #e2211c;
+  font-size: 28rpx;
+}

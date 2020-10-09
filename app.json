@@ -4,12 +4,13 @@
     "pages/navigate/navigate",
     "pages/index/index",
     "pages/logs/logs",
-    "pages/we/we"
+    "pages/we/we",
+    "components/actionsheet/actionsheet"
   ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "Weixin",
+    "navigationBarTitleText": "婚礼邀请函",
     "navigationBarTextStyle": "black"
   },
   "style": "v2",
@@ -29,7 +30,7 @@
         "text": "导航"
       },
       {
-        "pagePath": "pages/navigate/navigate",
+        "pagePath": "pages/we/we",
         "iconPath": "images/tab/ic_heart_normal.png",
         "selectedIconPath": "images/tab/ic_heart_select.png",
         "text": "我们"

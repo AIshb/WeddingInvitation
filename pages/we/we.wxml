@@ -1,8 +1,32 @@
 <!--pages/we/we.wxml-->
 <view class="container">
   <scroll-view class="content" scroll-y="true">
-    <swiper indicator-dots="true" autoplay="true" interval="3000" class="scroll">
-
+    <!-- 顶部放一个滑块视图，展示图片 -->
+    <swiper indicator-dots="true" autoplay="true" interval="3000" class="banner">
+      <block wx:for="{{imgs}}">
+        <swiper-item>
+          <image src="{{item.urls[index]}}" mode="aspectFill" class="bannerItem" />
+        </swiper-item>
+      </block>
     </swiper>
+
+    <!-- 图片列表 -->
+    <view class='list bannerStyle' wx:for="{{imgs}}">
+      <!-- 列表的标题 -->
+      <view class='list-title'>
+        <view class="text-moreDay">
+          <text class="name">{{item.title}}</text>
+        </view>
+      </view>
+      <!-- 列表的图片 -->
+      <view class='imgList' bindtap='jump' data-id="{{index}}" data-type="{{index}}">
+        <view> 
+          <image class="banner_image" mode="aspectFill" src='{{item.urls[index]}}' data-type="imgUrls" data-img="{{item.urls[index]}}" data-index="0"></image>
+        </view>
+      </view>
+      <view class="jump" data-id="{{index}}" bindtap='jump'>查看详情</view>
+
+    </view>
+
   </scroll-view>
 </view>

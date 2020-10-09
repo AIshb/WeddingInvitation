@@ -11,7 +11,7 @@ Page({
     autoPlay: false,
     interval: 2600,
     duration: 1200,
-    // musicUrl: "http://music.163.com/song/media/outer/url?id=386181.mp3",
+    musicUrl: "http://music.163.com/song/media/outer/url?id=386181.mp3",
     // innerAudioContext: wx.createInnerAudioContext(),
     isPlayingMusic: true,
     // bgImg: "/images/bg.jpg",
@@ -19,8 +19,8 @@ Page({
     // bgImg: "https://wedding-pic.su.bcebos.com/bg.jpeg",
     inviteName: "石鸿斌&刘梦眙",
     inviteDateOne: "将于 2020年10月24日 举办婚礼",
-    inviteDateTwo: "时间：18:08",
-    inviteAddress: "地址：昆山皇冠国际会展酒店"
+    inviteDateTwo: "时间：17:30",
+    inviteAddress: "地址：昆山皇冠国际会展酒店7楼3号厅"
   },
 
   /**
@@ -96,17 +96,16 @@ Page({
   },
 
   btnAddress: function(event) {
-    wx.getLocation({
-      type: 'gcj02',
-      success (res) {
-        const latitude = 31.379537
-        const longitude = 120.926080
-        wx.openLocation({
-          latitude,
-          longitude,
-          scale: 18
-        })
-      }
+    let plugin = requirePlugin('routePlan')
+    let key = 'NMXBZ-4RQWU-ONDVL-22542-ZZ2TH-IFFZV'  //使用在腾讯位置服务申请的key
+    let referer = '石鸿斌和刘梦眙的婚礼邀请'   //调用插件的app的名称
+    let endPoint = JSON.stringify({  //终点
+      'name': '昆山皇冠国际会展酒店',
+      'latitude': 31.379537,
+      'longitude': 120.926080
+    })
+    wx.navigateTo({
+      url: 'plugin://routePlan/index?key=' + key + '&referer=' + referer + '&endPoint=' + endPoint
     })
   }
 })

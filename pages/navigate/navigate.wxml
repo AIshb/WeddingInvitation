@@ -1,2 +1,37 @@
 <!--pages/navigate/navigate.wxml-->
-<text>pages/navigate/navigate.wxml</text>
+<view class="map-view-container">
+	<view class="feature-container">
+		<view class="feature-content border-bottom border-top">
+			<text class="feature-label">起点位置</text>
+			<view class="feature-txt" bindtap="onChooseStartPoint">
+				<text wx:if="{{!startPoint}}">当前位置</text>
+				<text class="active" wx:else>{{startPoint.name}}</text>
+				<image class="right-arrow" src="{{imgs.rightArrow}}"></image>
+			</view>
+		</view>
+		<view class="feature-content border-bottom">
+			<text class="feature-label">出行方式</text>
+			<view class="feature-txt">
+				<view
+					bindtap="onSelectMode"
+					class="{{modeIndex === index ? 'active feature-txt-item' : 'feature-txt-item'}}"
+					data-index="{{index}}"
+					wx:for="{{modes}}">
+					{{item.text}}
+				</view>
+			</view>
+		</view>
+	</view>
+  <view class="primary-btn mt30" bindtap="onWatchRoute">
+    查看路线
+	</view>
+	<view class="primary-btn mt30" bindtap="onNavigateRoute">
+		开始导航
+	</view>
+	<mp-actionsheet
+		bindactiontap="onSelectCustom"
+		ext-class="custom-actionsheet"
+		show="{{showCustomActionsheet}}"
+		actions="{{customStyles}}">
+  </mp-actionsheet>
+</view>

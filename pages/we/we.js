@@ -5,7 +5,35 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    imgs: [
+      {
+        title: "日常",
+        urls: [
+          "http://qhm5qrxhf.hd-bkt.clouddn.com/swiper1.jpeg",
+          "http://qhm5qrxhf.hd-bkt.clouddn.com/swiper2.jpeg",
+          "http://qhm5qrxhf.hd-bkt.clouddn.com/swiper3.jpeg"
+        ]
+      }, {
+        title: "结婚啦",
+        urls: [
+          "http://qhm5qrxhf.hd-bkt.clouddn.com/swiper1.jpeg",
+          "http://qhm5qrxhf.hd-bkt.clouddn.com/swiper2.jpeg",
+          "http://qhm5qrxhf.hd-bkt.clouddn.com/swiper3.jpeg"
+        ]
+      }, {
+        title: "婚纱照",
+        urls: [
+          "http://qhm5qrxhf.hd-bkt.clouddn.com/swiper1.jpeg",
+          "http://qhm5qrxhf.hd-bkt.clouddn.com/swiper2.jpeg",
+          "http://qhm5qrxhf.hd-bkt.clouddn.com/swiper3.jpeg"
+        ]
+      }
+    ],
+    imgUrls: [
+      "http://qhm5qrxhf.hd-bkt.clouddn.com/swiper1.jpeg",
+      "http://qhm5qrxhf.hd-bkt.clouddn.com/swiper2.jpeg",
+      "http://qhm5qrxhf.hd-bkt.clouddn.com/swiper3.jpeg"
+    ]
   },
 
   /**
