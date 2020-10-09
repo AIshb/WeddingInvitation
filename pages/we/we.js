@@ -7,32 +7,26 @@ Page({
   data: {
     imgs: [
       {
-        title: "日常",
+        title: "相爱是山长水阔，最后是你🌻",
         urls: [
-          "http://qhm5qrxhf.hd-bkt.clouddn.com/swiper1.jpeg",
-          "http://qhm5qrxhf.hd-bkt.clouddn.com/swiper2.jpeg",
-          "http://qhm5qrxhf.hd-bkt.clouddn.com/swiper3.jpeg"
+          "https://wedding-pic.su.bcebos.com/body1.jpeg"
         ]
       }, {
-        title: "结婚啦",
+        title: "以爱之名，共度一生👰🤵",
         urls: [
-          "http://qhm5qrxhf.hd-bkt.clouddn.com/swiper1.jpeg",
-          "http://qhm5qrxhf.hd-bkt.clouddn.com/swiper2.jpeg",
-          "http://qhm5qrxhf.hd-bkt.clouddn.com/swiper3.jpeg"
+          "https://wedding-pic.su.bcebos.com/body2.jpeg"
         ]
       }, {
-        title: "婚纱照",
+        title: "江湖路远，同去同归❣️",
         urls: [
-          "http://qhm5qrxhf.hd-bkt.clouddn.com/swiper1.jpeg",
-          "http://qhm5qrxhf.hd-bkt.clouddn.com/swiper2.jpeg",
-          "http://qhm5qrxhf.hd-bkt.clouddn.com/swiper3.jpeg"
+          "https://wedding-pic.su.bcebos.com/body3.jpeg"
         ]
       }
     ],
     imgUrls: [
-      "http://qhm5qrxhf.hd-bkt.clouddn.com/swiper1.jpeg",
-      "http://qhm5qrxhf.hd-bkt.clouddn.com/swiper2.jpeg",
-      "http://qhm5qrxhf.hd-bkt.clouddn.com/swiper3.jpeg"
+      "https://wedding-pic.su.bcebos.com/cover1.jpeg",
+      "https://wedding-pic.su.bcebos.com/cover2.jpeg",
+      "https://wedding-pic.su.bcebos.com/cover3.jpeg"
     ]
   },
 

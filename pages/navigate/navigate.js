@@ -12,7 +12,7 @@ Page({
 		],
 		modeIndex: 0,
 		startPoint: null,
-		isNavigate: true,
+		isNavigate: false,
 		showCustomActionsheet: false,
 		customStyles: [
 			{text: '墨渊', value: KEY, icon: `${CDN_PATH}/iconMapMoyuan@3x.png`},

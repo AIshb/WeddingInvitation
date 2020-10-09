@@ -96,16 +96,16 @@ Page({
   },
 
   btnAddress: function(event) {
-    let plugin = requirePlugin('routePlan')
-    let key = 'NMXBZ-4RQWU-ONDVL-22542-ZZ2TH-IFFZV'  //使用在腾讯位置服务申请的key
-    let referer = '石鸿斌和刘梦眙的婚礼邀请'   //调用插件的app的名称
-    let endPoint = JSON.stringify({  //终点
-      'name': '昆山皇冠国际会展酒店',
-      'latitude': 31.379537,
-      'longitude': 120.926080
-    })
-    wx.navigateTo({
-      url: 'plugin://routePlan/index?key=' + key + '&referer=' + referer + '&endPoint=' + endPoint
-    })
+    // let plugin = requirePlugin('routePlan')
+    // let key = 'NMXBZ-4RQWU-ONDVL-22542-ZZ2TH-IFFZV'  //使用在腾讯位置服务申请的key
+    // let referer = '石鸿斌和刘梦眙的婚礼邀请'   //调用插件的app的名称
+    // let endPoint = JSON.stringify({  //终点
+    //   'name': '昆山皇冠国际会展酒店',
+    //   'latitude': 31.379537,
+    //   'longitude': 120.926080
+    // })
+    // wx.navigateTo({
+    //   url: 'plugin://routePlan/index?key=' + key + '&referer=' + referer + '&endPoint=' + endPoint
+    // })
   }
 })

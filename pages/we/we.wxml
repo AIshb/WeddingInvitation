@@ -3,9 +3,9 @@
   <scroll-view class="content" scroll-y="true">
     <!-- 顶部放一个滑块视图，展示图片 -->
     <swiper indicator-dots="true" autoplay="true" interval="3000" class="banner">
-      <block wx:for="{{imgs}}">
+      <block wx:for="{{imgUrls}}">
         <swiper-item>
-          <image src="{{item.urls[index]}}" mode="aspectFill" class="bannerItem" />
+          <image src="{{item}}" mode="aspectFill" class="bannerItem" />
         </swiper-item>
       </block>
     </swiper>
@@ -21,10 +21,10 @@
       <!-- 列表的图片 -->
       <view class='imgList' bindtap='jump' data-id="{{index}}" data-type="{{index}}">
         <view> 
-          <image class="banner_image" mode="aspectFill" src='{{item.urls[index]}}' data-type="imgUrls" data-img="{{item.urls[index]}}" data-index="0"></image>
+          <image class="banner_image" mode="aspectFill" src='{{item.urls[0]}}' data-type="imgUrls" data-img="{{item.urls[0]}}" data-index="0"></image>
         </view>
       </view>
-      <view class="jump" data-id="{{index}}" bindtap='jump'>查看详情</view>
+      <!-- <view class="jump" data-id="{{index}}" bindtap='jump'>查看详情</view> -->
 
     </view>
 

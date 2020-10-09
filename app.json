@@ -2,8 +2,6 @@
   "pages": [
     "pages/home/home",
     "pages/navigate/navigate",
-    "pages/index/index",
-    "pages/logs/logs",
     "pages/we/we",
     "components/actionsheet/actionsheet"
   ],
